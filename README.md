@@ -1,5 +1,4 @@
 # libft
-
 My very first own library in C
 
 |Program name  |libft.a|
