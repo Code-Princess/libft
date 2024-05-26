@@ -6,12 +6,15 @@
 /*   By: llacsivy <llacsivy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:19:44 by llacsivy          #+#    #+#             */
-/*   Updated: 2024/04/09 15:16:36 by llacsivy         ###   ########.fr       */
+/*   Updated: 2024/05/26 19:35:58 by llacsivy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # include <stddef.h>
 # include <stdlib.h>
@@ -83,5 +86,13 @@ char	*ft_itoa_hexadecimal_upper(unsigned int n);
 char	*ft_itoa_hexadecimal_ptr(unsigned long n);
 char	*ft_strjoin(char const *s1, char const *s2);
 int		ft_putptr(unsigned long ptr, int *error_ptr);
+int		ft_strlen_modified(const char *c);
+void	ft_bzero(void *s, size_t n);
+char	*ft_calloc_modified(size_t count, size_t size);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin_modified(char *s1, char *s2, int s2_len);
+char	*read_from_fd_into_buffer(int fd, char *buffer);
+char	*adjust_buffer(char *old_buffer);
+char	*get_next_line(int fd);
 
 #endif
