@@ -18,10 +18,8 @@ static int		ft_strncmp_help(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	needle_len;
-	size_t	haystack_len;
 
 	needle_len = ft_strlen_help(needle);
-	haystack_len = ft_strlen_help(haystack);
 	if (*needle == '\0')
 		return ((char *)haystack);
 	while (*haystack != '\0' && needle_len <= len)
